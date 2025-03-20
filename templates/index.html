@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Review Sentiment Analyzer 🎬</h1>
+
+        <!-- Text Sentiment Analysis -->
+        <textarea id="textInput" placeholder="Enter movie review text here..."></textarea>
+        <button onclick="analyzeText()">Analyze Text</button>
+
+        <!-- Image Upload Sentiment Analysis -->
+        <label for="imageInput" class="file-upload">Upload Image</label>
+        <input type="file" id="imageInput" hidden>
+        <button onclick="analyzeImage()">Analyze Image</button>
+
+        <!-- URL Sentiment Analysis -->
+        <input type="text" id="imageUrl" placeholder="Enter image URL">
+        <button onclick="analyzeImageUrl()">Analyze Image URL</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
